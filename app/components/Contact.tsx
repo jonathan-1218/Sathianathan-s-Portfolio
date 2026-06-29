@@ -35,9 +35,14 @@ export default function Contact() {
   const set = (k: string) => (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) =>
     setForm(f => ({ ...f, [k]: e.target.value }))
 
-  const onSubmit = (e: React.FormEvent) => {
+  const onSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    setSubmitted(true)
+    const res = await fetch('https://formspree.io/f/xyzzyzzz', {  // ponytail: replace xyzzyzzz with your Formspree form ID
+      method: 'POST',
+      headers: { 'Accept': 'application/json' },
+      body: JSON.stringify(form),
+    })
+    if (res.ok) setSubmitted(true)
   }
 
   const fieldStyle: React.CSSProperties = {

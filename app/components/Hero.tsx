@@ -29,19 +29,6 @@ export default function Hero() {
 
       <div style={{ position: 'relative', zIndex: 5, width: '100%', maxWidth: 1280, margin: '0 auto', padding: '80px 56px 100px' }}>
 
-        {/* Badge */}
-        <div style={{
-          display: 'inline-flex', alignItems: 'center', gap: 10,
-          padding: '8px 18px', background: 'oklch(97% 0.025 12)',
-          borderRadius: 100, marginBottom: 48,
-          animation: 'heroFadeUp 0.8s cubic-bezier(0.16,1,0.3,1) 0.1s both',
-        }}>
-          <div style={{ width: 8, height: 8, background: 'oklch(38% 0.16 12)', borderRadius: '50%', animation: 'dotPulse 2.2s ease-in-out infinite' }} />
-          <span style={{ fontSize: 12, fontWeight: 500, color: 'oklch(28% 0.16 12)', letterSpacing: '0.08em', textTransform: 'uppercase' }}>
-            Available for New Projects
-          </span>
-        </div>
-
         {/* Name */}
         <h1 style={{
           fontFamily: 'var(--font-cormorant-var, serif)',
@@ -50,8 +37,7 @@ export default function Hero() {
           marginBottom: 36,
           animation: 'heroNameReveal 1.1s cubic-bezier(0.16,1,0.3,1) 0.3s both',
         }}>
-          Sathianathan<br />
-          <em style={{ fontStyle: 'italic', fontWeight: 300, color: 'oklch(38% 0.16 12)' }}>V.</em>
+          Sathianathan
         </h1>
 
         {/* Roles row */}
