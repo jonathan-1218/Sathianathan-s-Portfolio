@@ -37,7 +37,7 @@ export default function Hero() {
           marginBottom: 36,
           animation: 'heroNameReveal 1.1s cubic-bezier(0.16,1,0.3,1) 0.3s both',
         }}>
-          Sathianathan <em style={{ fontStyle: 'italic', fontWeight: 300, color: 'oklch(38% 0.16 12)' }}>V.</em>
+          Sathianathan V.<em style={{ fontStyle: 'italic', fontWeight: 300, color: 'oklch(38% 0.16 12)' }}>V.</em>
         </h1>
 
         {/* Roles row */}
