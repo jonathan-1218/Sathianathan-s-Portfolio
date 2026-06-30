@@ -1,3 +1,4 @@
+import type { Metadata } from 'next'
 import Link     from 'next/link'
 import Cursor   from './components/Cursor'
 import Nav      from './components/Nav'
@@ -7,6 +8,10 @@ import About    from './components/About'
 import Services from './components/Services'
 import Contact  from './components/Contact'
 import Footer   from './components/Footer'
+
+export const metadata: Metadata = {
+  alternates: { canonical: '/' },
+}
 
 function WorkCTA() {
   return (

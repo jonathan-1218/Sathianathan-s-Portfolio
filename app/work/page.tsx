@@ -1,7 +1,19 @@
+import type { Metadata } from 'next'
 import Image from 'next/image'
 import Cursor from '../components/Cursor'
 import Nav    from '../components/Nav'
 import Footer from '../components/Footer'
+
+export const metadata: Metadata = {
+  title: 'Work',
+  description: 'Selected portfolio — websites, logos, brochures, and banner designs by V. Sathianathan, Founder & CEO of Amazepixels Technologies.',
+  alternates: { canonical: '/work' },
+  openGraph: {
+    title: 'Selected Work | V. Sathianathan',
+    description: 'Websites, logos, brochures, and banners — 200+ projects across UI/UX, branding, and digital design.',
+    url: '/work',
+  },
+}
 
 const sites = [
   { name: 'Mirasvisa.com',        cat: 'UI/UX · Travel',          url: 'https://mirasvisa.com',           img: '/websites/site1.jpeg' },
