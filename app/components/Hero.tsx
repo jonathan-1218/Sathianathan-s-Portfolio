@@ -16,7 +16,7 @@ export default function Hero() {
     <section
       onMouseMove={onMouseMove}
       style={{
-        position: 'relative', minHeight: '100vh', background: '#faf9f7',
+        position: 'relative', minHeight: '1vh', background: '#faf9f7',
         display: 'flex', alignItems: 'center', overflow: 'hidden', paddingTop: 68,
       }}
     >
