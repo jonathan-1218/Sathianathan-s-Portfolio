@@ -119,7 +119,13 @@ body {
   .fc-m { flex-direction: column !important; align-items: flex-start !important; gap: 24px !important; }
 
   /* Hero content padding */
-  .hero-inner { padding: 60px 0 80px !important; }
+  .hero-inner { padding: 60px 20px 80px !important; }
+
+  /* Hero roles — allow wrapping */
+  .hero-roles { white-space: normal !important; }
+
+  /* Hide decorative giant S on mobile */
+  .hero-ghost { display: none !important; }
 
   /* Hero stats — wrap */
   .hero-stats { flex-wrap: wrap !important; }

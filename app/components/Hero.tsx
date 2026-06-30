@@ -47,7 +47,7 @@ export default function Hero() {
         <div style={{ display: 'flex', alignItems: 'center', gap: 24, marginBottom: 28,
           animation: 'heroFadeUp 0.9s cubic-bezier(0.16,1,0.3,1) 0.6s both' }}>
           <div style={{ height: 1, background: 'oklch(38% 0.16 12)', flexShrink: 0, animation: 'lineExpand 0.9s cubic-bezier(0.16,1,0.3,1) 0.9s both' }} />
-          <p style={{ fontSize: 'clamp(11px,1vw,14px)', fontWeight: 500, color: '#6b7280', letterSpacing: '0.14em', textTransform: 'uppercase', whiteSpace: 'nowrap' }}>
+          <p className="hero-roles" style={{ fontSize: 'clamp(11px,1vw,14px)', fontWeight: 500, color: '#6b7280', letterSpacing: '0.14em', textTransform: 'uppercase', whiteSpace: 'nowrap' }}>
             UI/UX Design &nbsp;·&nbsp; SEO &nbsp;·&nbsp; WordPress &nbsp;·&nbsp; Brand Identity
           </p>
         </div>
@@ -108,7 +108,7 @@ export default function Hero() {
       </div>
 
       {/* Ghosted S */}
-      <div style={{ position: 'absolute', right: -20, top: 68,
+      <div className="hero-ghost" style={{ position: 'absolute', right: -20, top: 68,
         fontFamily: 'var(--font-cormorant-var, serif)',
         fontSize: 'clamp(200px,28vw,420px)', fontWeight: 300,
         color: 'oklch(38% 0.16 12 / 0.04)', lineHeight: 1,
