@@ -9,7 +9,7 @@ export default function Nav() {
       WebkitBackdropFilter: 'blur(20px) saturate(160%)',
       borderBottom: '1px solid rgba(0,0,0,0.06)',
     }}>
-      <a href="#" style={{
+      <a href="/" style={{
         fontFamily: 'var(--font-cormorant-var, serif)',
         fontSize: 22, fontWeight: 600, letterSpacing: '-0.02em',
         textDecoration: 'none', color: '#111827',
@@ -19,7 +19,7 @@ export default function Nav() {
       <div style={{ display: 'flex', alignItems: 'center', gap: 36 }}>
         <a href="#about"    className="nav-link" style={{ fontSize: 13, fontWeight: 400, letterSpacing: '0.03em', textDecoration: 'none' }}>About</a>
         <a href="#services" className="nav-link" style={{ fontSize: 13, fontWeight: 400, letterSpacing: '0.03em', textDecoration: 'none' }}>Services</a>
-        <a href="#work"     className="nav-link" style={{ fontSize: 13, fontWeight: 400, letterSpacing: '0.03em', textDecoration: 'none' }}>Work</a>
+        <a href="/work"     className="nav-link" style={{ fontSize: 13, fontWeight: 400, letterSpacing: '0.03em', textDecoration: 'none' }}>Work</a>
         <a href="#contact" className="nav-cta" style={{
           fontSize: 13, fontWeight: 500, padding: '10px 24px',
           background: 'oklch(38% 0.16 12)', color: '#fff',
