@@ -16,7 +16,7 @@ export default function Hero() {
     <section
       onMouseMove={onMouseMove}
       style={{
-        position: 'relative', minHeight: '1vh', background: '#faf9f7',
+        position: 'relative', minHeight: '100vh', background: '#faf9f7',
         display: 'flex', alignItems: 'center', overflow: 'hidden', paddingTop: 68,
       }}
     >
@@ -37,7 +37,7 @@ export default function Hero() {
           marginBottom: 36,
           animation: 'heroNameReveal 1.1s cubic-bezier(0.16,1,0.3,1) 0.3s both',
         }}>
-          Sathianathan V.<em style={{ fontStyle: 'italic', fontWeight: 300, color: 'oklch(38% 0.16 12)' }}>V.</em>
+          Sathianathan <em style={{ fontStyle: 'italic', fontWeight: 300, color: 'oklch(38% 0.16 12)' }}>V.</em>
         </h1>
 
         {/* Roles row */}
