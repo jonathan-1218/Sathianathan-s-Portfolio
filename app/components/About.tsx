@@ -1,4 +1,5 @@
 'use client'
+import Image from 'next/image'
 import { useEffect, useRef, useState } from 'react'
 import { motion } from 'framer-motion'
 
@@ -103,15 +104,9 @@ export default function About() {
           <div>
             <motion.div
               variants={reveal} initial="hidden" whileInView="show" viewport={{ once: true, margin: '-48px' }} custom={120}
-              style={{ width: '100%', aspectRatio: '4/5', background: 'linear-gradient(145deg,#f5ddd9 0%,#eecdc7 100%)', borderRadius: 6, marginBottom: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', overflow: 'hidden' }}
+              style={{ width: '100%', aspectRatio: '4/5', borderRadius: 6, marginBottom: 1, overflow: 'hidden', position: 'relative' }}
             >
-              <div style={{ textAlign: 'center' }}>
-                <svg width="56" height="56" viewBox="0 0 56 56" fill="none" style={{ display: 'block', margin: '0 auto 14px' }}>
-                  <circle cx="28" cy="20" r="11" stroke="oklch(38% 0.16 12 / 0.4)" strokeWidth="1.5"/>
-                  <path d="M6 50c0-12.15 9.85-22 22-22s22 9.85 22 22" stroke="oklch(38% 0.16 12 / 0.4)" strokeWidth="1.5" strokeLinecap="round"/>
-                </svg>
-                <span style={{ fontSize: 11, fontFamily: 'monospace', color: 'oklch(38% 0.16 12 / 0.5)', letterSpacing: '0.06em' }}>Your Photo Here</span>
-              </div>
+              <Image src="/me.jpeg" alt="Sathianathan V." fill style={{ objectFit: 'cover', objectPosition: 'center top' }} sizes="50vw" />
             </motion.div>
 
             <div ref={statsRef} style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 1, background: '#e8c0b9' }}>

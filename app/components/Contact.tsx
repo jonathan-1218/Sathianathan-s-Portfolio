@@ -113,7 +113,7 @@ export default function Contact() {
               <input required type="email" className="form-field" placeholder="Email Address" value={form.email} onChange={set('email')} style={fieldStyle} />
               <select required className="form-field" value={form.service} onChange={set('service')} style={{ ...fieldStyle, color: form.service ? '#fff' : 'rgba(255,255,255,0.45)' }}>
                 <option value="" disabled style={{ background: 'oklch(38% 0.16 12)' }}>Service Needed</option>
-                {['UI/UX Design','SEO Optimization','WordPress Development','Logo & Brand Identity','Amazon A+ Content','Full Package'].map(o => (
+                {['UI Design','Website Development','Logo Designing','SEO','Banner','Brochure'].map(o => (
                   <option key={o} value={o} style={{ background: 'oklch(38% 0.16 12)' }}>{o}</option>
                 ))}
               </select>
