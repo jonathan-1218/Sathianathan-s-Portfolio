@@ -21,7 +21,8 @@ const brochures = [
 // Split 18 logos into two rows of 9 for the marquee
 const row1 = Array.from({ length: 9 },  (_, i) => `/logos/logo${i + 1}.jpeg`)
 const row2 = Array.from({ length: 9 },  (_, i) => `/logos/logo${i + 10}.jpeg`)
-const banners = Array.from({ length: 6 }, (_, i) => `/banners/banner${i + 1}.jpeg`)
+// banner6 is identical to banner4 (both yellow Schengen) — show only 5
+const banners = [1, 2, 3, 4, 5].map(n => `/banners/banner${n}.jpeg`)
 
 function Label({ text, light }: { text: string; light?: boolean }) {
   return (
@@ -69,7 +70,7 @@ export default function Work() {
         <section style={{ background: '#faf9f7', padding: '0 56px 100px' }}>
           <div style={{ maxWidth: 1280, margin: '0 auto' }}>
             <Label text="Websites" />
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 16 }}>
+            <div className="g3" style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 16 }}>
               {sites.map((s) => (
                 <a key={s.url} href={s.url} target="_blank" rel="noopener noreferrer"
                   className="portfolio-card"
@@ -115,7 +116,7 @@ export default function Work() {
         <section style={{ background: '#faf9f7', padding: '80px 56px' }}>
           <div style={{ maxWidth: 1280, margin: '0 auto' }}>
             <Label text="Brochures" />
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4,1fr)', gap: 16 }}>
+            <div className="g4" style={{ display: 'grid', gridTemplateColumns: 'repeat(4,1fr)', gap: 16 }}>
               {brochures.map((b, i) => (
                 <a key={i} href={b.file} target="_blank" rel="noopener noreferrer"
                   className="portfolio-card"
@@ -134,16 +135,25 @@ export default function Work() {
           </div>
         </section>
 
-        {/* Banners — show full, natural aspect ratio */}
+        {/* Banners — full natural aspect ratio, editorial 3+2 layout */}
         <section style={{ background: '#0d1117', padding: '80px 56px' }}>
           <div style={{ maxWidth: 1280, margin: '0 auto' }}>
             <Label text="Banners" light />
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 16, alignItems: 'start' }}>
-              {banners.map((src, i) => (
+            {/* Row 1: 3 banners */}
+            <div className="banner-r1" style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 16, marginBottom: 16 }}>
+              {banners.slice(0, 3).map((src, i) => (
                 <div key={i} className="portfolio-card" style={{ borderRadius: 10, overflow: 'hidden' }}>
-                  {/* ponytail: width/height are hints only; height:auto keeps natural ratio */}
                   <Image src={src} alt={`Banner ${i + 1}`} width={1200} height={1200}
                     sizes="33vw" style={{ width: '100%', height: 'auto', display: 'block' }} />
+                </div>
+              ))}
+            </div>
+            {/* Row 2: 2 banners, wider */}
+            <div className="banner-r2" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}>
+              {banners.slice(3).map((src, i) => (
+                <div key={i} className="portfolio-card" style={{ borderRadius: 10, overflow: 'hidden' }}>
+                  <Image src={src} alt={`Banner ${i + 4}`} width={1200} height={1200}
+                    sizes="50vw" style={{ width: '100%', height: 'auto', display: 'block' }} />
                 </div>
               ))}
             </div>

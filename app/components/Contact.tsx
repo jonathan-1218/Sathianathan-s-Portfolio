@@ -21,10 +21,10 @@ const contactRows = [
     href: 'tel:+919941619806',
   },
   {
-    icon: <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" stroke="white" strokeWidth="1.5"/><circle cx="12" cy="9" r="2.5" stroke="white" strokeWidth="1.5"/></svg>,
-    label: 'Location',
-    value: 'Chennai, India · Available Worldwide',
-    href: undefined,
+    icon: <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z" stroke="white" strokeWidth="1.5"/><rect x="2" y="9" width="4" height="12" stroke="white" strokeWidth="1.5"/><circle cx="4" cy="4" r="2" stroke="white" strokeWidth="1.5"/></svg>,
+    label: 'LinkedIn',
+    value: 'linkedin.com/in/amazepixels',
+    href: 'https://www.linkedin.com/in/amazepixels/',
   },
 ]
 
@@ -55,7 +55,7 @@ export default function Contact() {
 
   return (
     <section id="contact" style={{ background: 'oklch(38% 0.16 12)', padding: '144px 56px' }}>
-      <div style={{ maxWidth: 1280, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 96, alignItems: 'start' }}>
+      <div className="g2" style={{ maxWidth: 1280, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 96, alignItems: 'start' }}>
 
         {/* Left */}
         <div>
@@ -111,7 +111,7 @@ export default function Contact() {
             <form onSubmit={onSubmit} style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
               <input required className="form-field" placeholder="Full Name" value={form.name} onChange={set('name')} style={fieldStyle} />
               <input required type="email" className="form-field" placeholder="Email Address" value={form.email} onChange={set('email')} style={fieldStyle} />
-              <select required className="form-field" value={form.service} onChange={set('service')} style={{ ...fieldStyle, color: form.service ? '#fff' : 'rgba(255,255,255,0.45)' }}>
+              <select required className="form-field form-select" value={form.service} onChange={set('service')} style={{ ...fieldStyle, color: form.service ? '#fff' : 'rgba(255,255,255,0.45)' }}>
                 <option value="" disabled style={{ background: 'oklch(38% 0.16 12)' }}>Service Needed</option>
                 {['UI Design','Website Development','Logo Designing','SEO','Banner','Brochure'].map(o => (
                   <option key={o} value={o} style={{ background: 'oklch(38% 0.16 12)' }}>{o}</option>

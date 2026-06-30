@@ -38,7 +38,7 @@ export default function About() {
       if (!entry.isIntersecting || started) return
       started = true
       runCounter(setYears, 20, 1600)
-      runCounter(setProjects, 500, 2000)
+      runCounter(setProjects, 200, 2000)
       runCounter(setClients, 100, 1800)
       obs.disconnect()
     }, { threshold: 0.4 })
@@ -58,7 +58,7 @@ export default function About() {
           <span style={{ fontSize: 11, fontWeight: 500, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'oklch(38% 0.16 12)' }}>About</span>
         </motion.div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 80, alignItems: 'start' }}>
+        <div className="g2" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 80, alignItems: 'start' }}>
           <div>
             <motion.h2
               variants={reveal} initial="hidden" whileInView="show" viewport={{ once: true, margin: '-48px' }} custom={80}
@@ -69,14 +69,14 @@ export default function About() {
 
             <motion.p
               variants={reveal} initial="hidden" whileInView="show" viewport={{ once: true, margin: '-48px' }} custom={160}
-              style={{ fontSize: 16, fontWeight: 300, lineHeight: 1.85, color: '#4b5563', marginBottom: 22 }}
+              style={{ fontSize: 17, fontWeight: 300, lineHeight: 1.85, color: '#4b5563', marginBottom: 22 }}
             >
               With over 19 years in UI/UX design and graphic design, I specialise in creating intuitive, visually compelling experiences that enhance user engagement and streamline interactions. From Chennai to global clients, my work spans every digital touchpoint.
             </motion.p>
 
             <motion.p
               variants={reveal} initial="hidden" whileInView="show" viewport={{ once: true, margin: '-48px' }} custom={240}
-              style={{ fontSize: 16, fontWeight: 300, lineHeight: 1.85, color: '#4b5563', marginBottom: 48 }}
+              style={{ fontSize: 17, fontWeight: 300, lineHeight: 1.85, color: '#4b5563', marginBottom: 48 }}
             >
               Specialising in Amazon A+ content, WordPress builds, SEO strategy, and full brand identity systems — I combine creative precision with a deep understanding of digital platforms to deliver cohesive, memorable experiences.
             </motion.p>

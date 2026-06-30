@@ -16,15 +16,15 @@ export default function Nav() {
       }}>
         SV<span style={{ color: 'oklch(38% 0.16 12)' }}>.</span>
       </a>
-      <div style={{ display: 'flex', alignItems: 'center', gap: 36 }}>
+      <div className="nav-links" style={{ display: 'flex', alignItems: 'center', gap: 36 }}>
         <a href="/#about"    className="nav-link" style={{ fontSize: 13, fontWeight: 400, letterSpacing: '0.03em', textDecoration: 'none' }}>About</a>
         <a href="/#services" className="nav-link" style={{ fontSize: 13, fontWeight: 400, letterSpacing: '0.03em', textDecoration: 'none' }}>Services</a>
-        <a href="/work"     className="nav-link" style={{ fontSize: 13, fontWeight: 400, letterSpacing: '0.03em', textDecoration: 'none' }}>Work</a>
-        <a href="#contact" className="nav-cta" style={{
+        <a href="/work"      className="nav-link" style={{ fontSize: 13, fontWeight: 400, letterSpacing: '0.03em', textDecoration: 'none' }}>Work</a>
+        <a href="/#contact"  className="nav-cta" style={{
           fontSize: 13, fontWeight: 500, padding: '10px 24px',
           background: 'oklch(38% 0.16 12)', color: '#fff',
           borderRadius: 100, textDecoration: 'none', letterSpacing: '0.02em',
-        }}>Hire Me</a>
+        }}>Let&apos;s Talk</a>
       </div>
     </nav>
   )

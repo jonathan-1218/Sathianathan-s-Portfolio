@@ -58,7 +58,7 @@ export default function Services() {
     <section id="services" style={{ background: '#faf9f7', padding: '144px 56px' }}>
       <div style={{ maxWidth: 1280, margin: '0 auto' }}>
 
-        <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: 48, marginBottom: 64 }}>
+        <div className="fc-m" style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: 48, marginBottom: 64 }}>
           <motion.h2
             variants={reveal} initial="hidden" whileInView="show" viewport={{ once: true, margin: '-48px' }} custom={0}
             style={{ fontFamily: 'var(--font-cormorant-var, serif)', fontSize: 'clamp(44px,5vw,68px)', fontWeight: 300, lineHeight: 1.06, letterSpacing: '-0.025em', color: '#111827', maxWidth: 480 }}
@@ -73,7 +73,7 @@ export default function Services() {
           </motion.p>
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 20 }}>
+        <div className="g2" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 20 }}>
           {services.map((s, i) => (
             <motion.div
               key={s.title}
@@ -85,7 +85,7 @@ export default function Services() {
                 {s.icon}
               </div>
               <h3 style={{ fontFamily: 'var(--font-cormorant-var, serif)', fontSize: 28, fontWeight: 400, letterSpacing: '-0.01em', color: '#111827', marginBottom: 16 }}>{s.title}</h3>
-              <p style={{ fontSize: 14, fontWeight: 300, lineHeight: 1.75, color: '#6b7280', marginBottom: 28 }}>{s.body}</p>
+              <p style={{ fontSize: 16, fontWeight: 300, lineHeight: 1.75, color: '#6b7280', marginBottom: 28 }}>{s.body}</p>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
                 {s.tags.map(tag => (
                   <span key={tag} style={{ fontSize: 11, fontWeight: 500, color: 'oklch(28% 0.16 12)', background: 'oklch(97% 0.025 12)', borderRadius: 100, padding: '5px 13px', letterSpacing: '0.04em' }}>{tag}</span>
